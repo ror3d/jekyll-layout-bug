@@ -1,0 +1,32 @@
+# Site settings
+title: Test
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://test.com" # the base hostname & protocol for your site
+lang: en-US
+timezone: US/Pacific
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  header_offset: 1
+  toc_levels: 1..2
+
+plugins:
+  - jekyll-redirect-from
+
+exclude:
+  - img_src
+
+excerpt_separator: <!--more-->
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "null"
+
+redirect_from:
+  json: false
